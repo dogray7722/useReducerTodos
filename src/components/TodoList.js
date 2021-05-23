@@ -23,7 +23,11 @@ export default function TodoList() {
           <button className="p-1">
             <FontAwesomeIcon icon={faEdit} />
           </button>
-          <button className="p-1">
+          <button 
+          onClick={() => dispatch({
+            type: "REMOVE_TODO", payload: todo
+          })}
+          className="p-1">
             <FontAwesomeIcon icon={faTrash} />
           </button>
         </li>
